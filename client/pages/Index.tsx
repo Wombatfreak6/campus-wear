@@ -139,35 +139,40 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 pt-20 pb-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="inline-block">
-                <span className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
+      <section className="relative overflow-hidden bg-background pt-24 pb-40">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full opacity-5 blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-400 rounded-full opacity-5 blur-3xl"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center">
+                <span className="px-4 py-2 bg-blue-500/10 text-accent rounded-full text-sm font-medium border border-accent/20">
                   Welcome to College Merch Hub
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
                 Express Your Campus Pride
               </h1>
-              <p className="text-lg text-gray-600 max-w-lg">
+              <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
                 Premium college merchandise designed for students, by students. Get exclusive hoodies, t-shirts, and accessories that represent your school spirit.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="px-8 py-4 bg-slate-900 text-white rounded-lg font-semibold hover:bg-slate-800 transition flex items-center justify-center gap-2">
+                <button className="px-8 py-3.5 bg-accent text-accent-foreground rounded-lg font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2">
                   Shop Now
-                  <ChevronRight size={20} />
+                  <ChevronRight size={18} />
                 </button>
-                <button className="px-8 py-4 border-2 border-slate-900 text-slate-900 rounded-lg font-semibold hover:bg-slate-50 transition">
+                <button className="px-8 py-3.5 border-2 border-border text-foreground rounded-lg font-semibold hover:bg-secondary transition-all duration-200">
                   Learn More
                 </button>
               </div>
             </div>
-            <div className="relative h-96 lg:h-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl opacity-90"></div>
+            <div className="relative h-96 lg:h-full min-h-[500px] lg:min-h-[600px]">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl shadow-lg"></div>
               <div className="absolute inset-0 rounded-2xl flex items-center justify-center">
-                <Shirt size={120} className="text-white opacity-80" />
+                <Shirt size={140} className="text-white opacity-40" />
               </div>
             </div>
           </div>
