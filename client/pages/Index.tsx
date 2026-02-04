@@ -186,8 +186,8 @@ export default function Index() {
                   <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center">
                     <Icon size={28} className="text-accent" />
                   </div>
-                  <h3 className="text-2xl font-bold">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{feature.title}</h3>
+                  <p className="text-slate-600 dark:text-foreground/70 leading-relaxed">{feature.description}</p>
                 </div>
               );
             })}
