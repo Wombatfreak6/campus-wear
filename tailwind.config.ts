@@ -13,6 +13,19 @@ export default {
       },
     },
     extend: {
+      spacing: {
+        xs: "4px",
+        sm: "8px",
+        md: "16px",
+        lg: "24px",
+        xl: "32px",
+      },
+      borderRadius: {
+        xs: "6px",
+        sm: "6px",
+        md: "10px",
+        lg: "14px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
