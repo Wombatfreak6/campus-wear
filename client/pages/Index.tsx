@@ -99,32 +99,41 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
+      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg"></div>
-              <span className="font-bold text-lg text-slate-900">CampusWear</span>
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-md shadow-md"></div>
+              <span className="font-bold text-lg">CampusWear</span>
             </div>
             <div className="hidden md:flex gap-8">
-              <a href="#shop" className="text-gray-600 hover:text-slate-900 transition">
+              <a href="#shop" className="text-muted-foreground hover:text-foreground transition-colors">
                 Shop
               </a>
-              <a href="#features" className="text-gray-600 hover:text-slate-900 transition">
+              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
                 About
               </a>
-              <a href="#contact" className="text-gray-600 hover:text-slate-900 transition">
+              <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
                 Contact
               </a>
             </div>
-            <button className="relative p-2">
-              <ShoppingCart size={24} className="text-slate-900" />
-              <span className="absolute top-1 right-1 bg-blue-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                0
-              </span>
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={toggleTheme}
+                className="p-2 hover:bg-secondary rounded-lg transition-colors"
+                aria-label="Toggle theme"
+              >
+                {isDark ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+              <button className="relative p-2 hover:bg-secondary rounded-lg transition-colors">
+                <ShoppingCart size={20} />
+                <span className="absolute top-1 right-1 bg-accent text-accent-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                  0
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
