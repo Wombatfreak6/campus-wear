@@ -207,38 +207,43 @@ export default function Index() {
       </section>
 
       {/* Product Listing Section */}
-      <section id="shop" className="py-20 bg-gray-50">
+      <section id="shop" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Featured Products</h2>
-            <p className="text-lg text-gray-600">Curated collection of campus favorites</p>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">Featured Products</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Curated collection of campus favorites</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product) => (
-              <div key={product.id} className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition duration-300">
+              <div
+                key={product.id}
+                className="bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
                 <div className={`relative h-48 ${product.image} flex items-center justify-center overflow-hidden`}>
                   {product.badge && (
-                    <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute top-3 right-3 bg-accent text-accent-foreground px-3 py-1 rounded-md text-xs font-semibold">
                       {product.badge}
                     </div>
                   )}
-                  <Shirt size={80} className="text-white opacity-30" />
+                  <Shirt size={80} className="text-white opacity-40" />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-slate-900 text-lg mb-2">{product.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-slate-900">{product.price}</span>
-                    <button className="p-2 bg-blue-50 hover:bg-blue-100 rounded-lg transition">
-                      <ShoppingCart size={20} className="text-blue-600" />
+                <div className="p-6 space-y-4">
+                  <div>
+                    <h3 className="font-semibold text-base mb-1">{product.name}</h3>
+                    <p className="text-muted-foreground text-xs line-clamp-2">{product.description}</p>
+                  </div>
+                  <div className="flex justify-between items-center pt-2 border-t border-border">
+                    <span className="text-lg font-semibold text-accent">{product.price}</span>
+                    <button className="p-2.5 bg-accent/10 hover:bg-accent/20 rounded-md transition-colors">
+                      <ShoppingCart size={18} className="text-accent" />
                     </button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="flex justify-center mt-12">
-            <button className="px-8 py-3 border-2 border-slate-900 text-slate-900 rounded-lg font-semibold hover:bg-slate-50 transition">
+          <div className="flex justify-center mt-16">
+            <button className="px-8 py-3 border-2 border-border text-foreground rounded-lg font-semibold hover:bg-secondary transition-all duration-200">
               View All Products
             </button>
           </div>
