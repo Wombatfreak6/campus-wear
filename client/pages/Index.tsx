@@ -180,22 +180,25 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      <section id="features" className="py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Why Choose Us</h2>
-            <p className="text-lg text-gray-600">Everything you need for authentic college apparel</p>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">Why Choose Us</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Everything you need for authentic college apparel</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((feature, idx) => {
               const Icon = feature.icon;
               return (
-                <div key={idx} className="p-8 bg-gray-50 rounded-xl hover:shadow-md transition duration-300">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <Icon size={24} className="text-blue-600" />
+                <div
+                  key={idx}
+                  className="p-8 bg-card rounded-lg border border-border hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 bg-accent/10 rounded-md flex items-center justify-center mb-4">
+                    <Icon size={24} className="text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
                 </div>
               );
             })}
