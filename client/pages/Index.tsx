@@ -217,8 +217,8 @@ export default function Index() {
                   <Shirt size={100} className="text-white opacity-35" />
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-xl font-bold">{product.name}</h3>
-                  <p className="text-muted-foreground text-sm line-clamp-2">{product.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">{product.name}</h3>
+                  <p className="text-slate-600 dark:text-foreground/70 text-sm line-clamp-2">{product.description}</p>
                   <div className="flex justify-between items-end pt-2">
                     <span className="text-2xl font-bold text-accent">{product.price}</span>
                     <button className="p-3 bg-accent/10 hover:bg-accent/20 rounded-lg transition-colors">
