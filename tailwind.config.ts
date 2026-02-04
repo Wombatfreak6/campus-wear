@@ -71,12 +71,6 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
-      borderRadius: {
-        xs: "6px",
-        sm: "6px",
-        md: "10px",
-        lg: "14px",
-      },
       keyframes: {
         "accordion-down": {
           from: {
