@@ -169,25 +169,25 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-secondary/30">
+      <section id="features" className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">Why Choose Us</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Everything you need for authentic college apparel</p>
+          <div className="mb-24">
+            <h2 className="text-5xl sm:text-6xl font-bold mb-6">Why Choose Us</h2>
+            <p className="text-lg text-muted-foreground max-w-xl">Everything you need for authentic college apparel</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {features.map((feature, idx) => {
               const Icon = feature.icon;
               return (
                 <div
                   key={idx}
-                  className="p-8 bg-card rounded-lg border border-border hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                  className="space-y-4"
                 >
-                  <div className="w-12 h-12 bg-accent/10 rounded-md flex items-center justify-center mb-4">
-                    <Icon size={24} className="text-accent" />
+                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Icon size={28} className="text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+                  <h3 className="text-2xl font-bold">{feature.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
                 </div>
               );
             })}
