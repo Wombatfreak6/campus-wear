@@ -143,10 +143,10 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center lg:items-start relative z-10">
             <div className="space-y-10 pt-8">
-              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold leading-none text-white dark:text-white">
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold leading-none text-slate-900 dark:text-white">
                 Express Your Campus Pride
               </h1>
-              <p className="text-lg max-w-md leading-relaxed text-foreground/90 dark:text-white/85">
+              <p className="text-lg max-w-md leading-relaxed text-slate-700 dark:text-white/90">
                 Premium college merchandise designed for students, by students.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-6">
