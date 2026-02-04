@@ -238,35 +238,35 @@ export default function Index() {
       </section>
 
       {/* Product Details Section */}
-      <section className="py-32 bg-secondary/20">
+      <section className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             <div className="relative w-full aspect-square">
-              <div className="bg-gradient-to-br from-slate-400 to-slate-600 rounded-lg w-full h-full flex items-center justify-center shadow-lg">
-                <Shirt size={160} className="text-white opacity-35" />
+              <div className="bg-gradient-to-br from-slate-500 to-slate-700 rounded-lg w-full h-full flex items-center justify-center shadow-lg border border-border/30 dark:border-border/50">
+                <Shirt size={180} className="text-white opacity-40" />
               </div>
             </div>
-            <div className="space-y-10 pt-8">
-              <div>
-                <h2 className="text-5xl sm:text-6xl font-bold leading-none mb-6">Premium College Hoodie</h2>
+            <div className="space-y-12 pt-8">
+              <div className="space-y-4">
+                <h2 className="text-5xl sm:text-6xl font-bold leading-none">Premium College Hoodie</h2>
                 <div className="flex items-center gap-3">
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-yellow-400 text-xl">★</span>
                     ))}
                   </div>
-                  <span className="text-muted-foreground text-base font-medium">(128 reviews)</span>
+                  <span className="text-foreground/70 text-base font-medium">(128 reviews)</span>
                 </div>
               </div>
 
-              <div className="space-y-8">
+              <div className="space-y-10">
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-4">Size</label>
+                  <label className="block text-sm font-bold uppercase tracking-wider mb-5">Size</label>
                   <div className="flex gap-3 flex-wrap">
                     {["XS", "S", "M", "L", "XL", "XXL"].map((size) => (
                       <button
                         key={size}
-                        className="px-5 py-3 border-2 border-foreground rounded-md hover:bg-foreground hover:text-background transition-all font-bold text-sm"
+                        className="px-5 py-3 border-2 border-foreground/50 text-foreground rounded-md hover:border-accent hover:bg-accent/10 transition-all font-bold text-sm active:bg-foreground active:text-background"
                       >
                         {size}
                       </button>
@@ -275,17 +275,17 @@ export default function Index() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-4">Color</label>
+                  <label className="block text-sm font-bold uppercase tracking-wider mb-5">Color</label>
                   <div className="flex gap-4 flex-wrap">
                     {[
-                      { name: "Navy", color: "bg-blue-900" },
-                      { name: "Gray", color: "bg-gray-600" },
-                      { name: "Black", color: "bg-black" },
-                      { name: "White", color: "bg-white border-2 border-foreground" },
+                      { name: "Navy", color: "bg-blue-900 border-2 border-blue-700 dark:border-blue-600" },
+                      { name: "Gray", color: "bg-gray-600 border-2 border-gray-500" },
+                      { name: "Black", color: "bg-black border-2 border-white/30" },
+                      { name: "White", color: "bg-white border-3 border-foreground" },
                     ].map((col) => (
                       <button
                         key={col.name}
-                        className={`w-12 h-12 rounded-lg hover:scale-110 transition-transform shadow-sm ${col.color}`}
+                        className={`w-14 h-14 rounded-lg hover:scale-110 hover:ring-2 hover:ring-accent transition-all shadow-md ring-offset-1 dark:ring-offset-background ${col.color}`}
                         title={col.name}
                       ></button>
                     ))}
@@ -293,22 +293,22 @@ export default function Index() {
                 </div>
               </div>
 
-              <div className="space-y-6 pt-8 border-t border-border">
-                <p className="text-muted-foreground leading-relaxed text-base">100% premium cotton with embroidered college logo. Perfect for campus and everyday wear.</p>
-                <div className="space-y-2">
-                  <div className="flex items-baseline gap-4">
-                    <span className="text-5xl font-bold">$49.99</span>
-                    <span className="text-lg text-muted-foreground line-through">$69.99</span>
+              <div className="space-y-7 pt-8 border-t border-border/50">
+                <p className="text-foreground/80 leading-relaxed text-base">100% premium cotton with embroidered college logo. Perfect for campus and everyday wear.</p>
+                <div className="space-y-3">
+                  <div className="flex items-baseline gap-6">
+                    <span className="text-6xl font-bold text-white">$49.99</span>
+                    <span className="text-xl text-foreground/50 line-through">$69.99</span>
+                    <span className="text-sm font-bold text-accent/80 uppercase tracking-wide">29% off</span>
                   </div>
-                  <div className="text-sm font-bold text-accent uppercase tracking-wide">Save 29%</div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="flex-1 px-8 py-4 bg-accent text-accent-foreground rounded-md font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all text-base">
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <button className="flex-1 px-8 py-4 bg-accent text-white font-bold rounded-md hover:shadow-lg hover:-translate-y-1 transition-all text-base active:translate-y-0">
                   Add to Cart
                 </button>
-                <button className="flex-1 px-8 py-4 border-2 border-foreground text-foreground rounded-md font-bold hover:bg-foreground hover:text-background transition-all text-base">
+                <button className="flex-1 px-8 py-4 border-2 border-accent text-accent rounded-md font-bold hover:bg-accent hover:text-white transition-all text-base">
                   Wishlist
                 </button>
               </div>
