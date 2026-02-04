@@ -436,19 +436,19 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-white py-16">
+      <footer className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 bg-accent rounded-md"></div>
-                <span className="font-bold text-lg">CampusWear</span>
+                <span className="font-bold text-base">CampusWear</span>
               </div>
-              <p className="text-white/70 text-sm">Premium college merchandise for students everywhere.</p>
+              <p className="text-white/70 text-sm leading-relaxed">Premium college merchandise for students everywhere.</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide">Shop</h4>
-              <ul className="space-y-2 text-white/70 text-sm">
+              <h4 className="font-bold mb-6 text-xs uppercase tracking-widest">Shop</h4>
+              <ul className="space-y-3 text-white/70 text-sm">
                 <li><a href="#" className="hover:text-white transition-colors">All Products</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Hoodies</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">T-Shirts</a></li>
@@ -456,8 +456,8 @@ export default function Index() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide">Company</h4>
-              <ul className="space-y-2 text-white/70 text-sm">
+              <h4 className="font-bold mb-6 text-xs uppercase tracking-widest">Company</h4>
+              <ul className="space-y-3 text-white/70 text-sm">
                 <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
@@ -465,8 +465,8 @@ export default function Index() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide">Legal</h4>
-              <ul className="space-y-2 text-white/70 text-sm">
+              <h4 className="font-bold mb-6 text-xs uppercase tracking-widest">Legal</h4>
+              <ul className="space-y-3 text-white/70 text-sm">
                 <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Shipping</a></li>
@@ -477,8 +477,8 @@ export default function Index() {
 
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p className="text-white/60 text-sm">© 2024 CampusWear. All rights reserved.</p>
-              <div className="flex gap-6 text-sm">
+              <p className="text-white/60 text-xs">© 2024 CampusWear. All rights reserved.</p>
+              <div className="flex gap-8 text-xs">
                 <a href="#" className="text-white/70 hover:text-white transition-colors">
                   Facebook
                 </a>
