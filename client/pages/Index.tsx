@@ -364,69 +364,69 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-background">
+      <section id="contact" className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
-              <h2 className="text-4xl sm:text-5xl font-bold mb-12">Get in Touch</h2>
-              <div className="space-y-8">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-md flex items-center justify-center flex-shrink-0">
-                    <Phone size={24} className="text-accent" />
+              <h2 className="text-5xl sm:text-6xl font-bold mb-16">Get in Touch</h2>
+              <div className="space-y-12">
+                <div className="flex gap-6">
+                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 pt-1">
+                    <Phone size={26} className="text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base mb-1">Call Us</h3>
+                    <h3 className="font-bold text-lg mb-2">Call Us</h3>
                     <p className="text-muted-foreground">+1 (555) 123-4567</p>
                   </div>
                 </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-md flex items-center justify-center flex-shrink-0">
-                    <Mail size={24} className="text-accent" />
+                <div className="flex gap-6">
+                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 pt-1">
+                    <Mail size={26} className="text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base mb-1">Email</h3>
+                    <h3 className="font-bold text-lg mb-2">Email</h3>
                     <p className="text-muted-foreground">hello@campuswear.com</p>
                   </div>
                 </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-md flex items-center justify-center flex-shrink-0">
-                    <MapPin size={24} className="text-accent" />
+                <div className="flex gap-6">
+                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 pt-1">
+                    <MapPin size={26} className="text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base mb-1">Address</h3>
+                    <h3 className="font-bold text-lg mb-2">Address</h3>
                     <p className="text-muted-foreground">123 College Ave, University Town, ST 12345</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-secondary rounded-lg p-8 border border-border">
-              <form className="space-y-5">
+            <div className="bg-secondary rounded-lg p-10 border border-border">
+              <form className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Name</label>
+                  <label className="block text-sm font-bold uppercase tracking-wider mb-3">Name</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50"
+                    className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50 text-base"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Email</label>
+                  <label className="block text-sm font-bold uppercase tracking-wider mb-3">Email</label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50"
+                    className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50 text-base"
                     placeholder="your@email.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Message</label>
+                  <label className="block text-sm font-bold uppercase tracking-wider mb-3">Message</label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50"
+                    className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50 text-base resize-none"
                     placeholder="Your message..."
                   ></textarea>
                 </div>
-                <button className="w-full px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:shadow-md transition-all">
+                <button className="w-full px-6 py-4 bg-accent text-accent-foreground rounded-md font-bold hover:shadow-md transition-all text-base">
                   Send Message
                 </button>
               </form>
