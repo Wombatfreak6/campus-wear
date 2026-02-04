@@ -172,8 +172,8 @@ export default function Index() {
       <section id="features" className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-24">
-            <h2 className="text-5xl sm:text-6xl font-bold mb-6">Why Choose Us</h2>
-            <p className="text-lg text-muted-foreground max-w-xl">Everything you need for authentic college apparel</p>
+            <h2 className="text-5xl sm:text-6xl font-bold mb-6 text-slate-900 dark:text-white">Why Choose Us</h2>
+            <p className="text-lg text-slate-600 dark:text-foreground/70 max-w-xl">Everything you need for authentic college apparel</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {features.map((feature, idx) => {
