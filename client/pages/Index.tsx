@@ -346,22 +346,17 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-br from-primary to-blue-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Ready to Show Your School Pride?</h2>
-          <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of students already wearing premium college merchandise. Limited stock available on popular items.
+      <section className="py-40 bg-primary text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+          <h2 className="text-6xl sm:text-7xl font-bold leading-none">Ready to Show Your School Pride?</h2>
+          <p className="text-lg text-white/80 max-w-xl mx-auto leading-relaxed">
+            Join thousands of students already wearing premium college merchandise.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+            <button className="px-8 py-4 bg-white text-primary rounded-md font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all text-base">
               Start Shopping
-              <ChevronRight size={20} />
             </button>
-            <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-all">
+            <button className="px-8 py-4 border-2 border-white text-white rounded-md font-bold hover:bg-white/10 transition-all text-base">
               Contact Us
             </button>
           </div>
