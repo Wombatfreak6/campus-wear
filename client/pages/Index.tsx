@@ -349,14 +349,14 @@ export default function Index() {
       <section className="py-40 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
           <h2 className="text-6xl sm:text-7xl font-bold leading-none">Ready to Show Your School Pride?</h2>
-          <p className="text-lg text-white/80 max-w-xl mx-auto leading-relaxed">
+          <p className="text-lg text-white/90 max-w-xl mx-auto leading-relaxed">
             Join thousands of students already wearing premium college merchandise.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-            <button className="px-8 py-4 bg-white text-primary rounded-md font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all text-base">
+            <button className="px-8 py-4 bg-white text-primary rounded-md font-bold hover:shadow-lg hover:-translate-y-1 transition-all text-base active:translate-y-0">
               Start Shopping
             </button>
-            <button className="px-8 py-4 border-2 border-white text-white rounded-md font-bold hover:bg-white/10 transition-all text-base">
+            <button className="px-8 py-4 border-2 border-white text-white rounded-md font-bold hover:bg-white hover:text-primary transition-all text-base">
               Contact Us
             </button>
           </div>
