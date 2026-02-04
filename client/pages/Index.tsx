@@ -384,69 +384,69 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8">Get in Touch</h2>
-              <div className="space-y-6">
+              <h2 className="text-4xl sm:text-5xl font-bold mb-12">Get in Touch</h2>
+              <div className="space-y-8">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone size={24} className="text-blue-600" />
+                  <div className="w-12 h-12 bg-accent/10 rounded-md flex items-center justify-center flex-shrink-0">
+                    <Phone size={24} className="text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900">Call Us</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <h3 className="font-semibold text-base mb-1">Call Us</h3>
+                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail size={24} className="text-blue-600" />
+                  <div className="w-12 h-12 bg-accent/10 rounded-md flex items-center justify-center flex-shrink-0">
+                    <Mail size={24} className="text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900">Email</h3>
-                    <p className="text-gray-600">hello@campuswear.com</p>
+                    <h3 className="font-semibold text-base mb-1">Email</h3>
+                    <p className="text-muted-foreground">hello@campuswear.com</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin size={24} className="text-blue-600" />
+                  <div className="w-12 h-12 bg-accent/10 rounded-md flex items-center justify-center flex-shrink-0">
+                    <MapPin size={24} className="text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900">Address</h3>
-                    <p className="text-gray-600">123 College Ave, University Town, ST 12345</p>
+                    <h3 className="font-semibold text-base mb-1">Address</h3>
+                    <p className="text-muted-foreground">123 College Ave, University Town, ST 12345</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-8">
-              <form className="space-y-4">
+            <div className="bg-secondary rounded-lg p-8 border border-border">
+              <form className="space-y-5">
                 <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Name</label>
+                  <label className="block text-sm font-semibold mb-2">Name</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Email</label>
+                  <label className="block text-sm font-semibold mb-2">Email</label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50"
                     placeholder="your@email.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Message</label>
+                  <label className="block text-sm font-semibold mb-2">Message</label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50"
                     placeholder="Your message..."
                   ></textarea>
                 </div>
-                <button className="w-full px-6 py-3 bg-slate-900 text-white rounded-lg font-semibold hover:bg-slate-800 transition">
+                <button className="w-full px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:shadow-md transition-all">
                   Send Message
                 </button>
               </form>
@@ -456,59 +456,59 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-16">
+      <footer className="bg-primary text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-blue-500 rounded-lg"></div>
+                <div className="w-8 h-8 bg-accent rounded-md"></div>
                 <span className="font-bold text-lg">CampusWear</span>
               </div>
-              <p className="text-blue-100 text-sm">Premium college merchandise for students everywhere.</p>
+              <p className="text-white/70 text-sm">Premium college merchandise for students everywhere.</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Shop</h4>
-              <ul className="space-y-2 text-blue-100 text-sm">
-                <li><a href="#" className="hover:text-white transition">All Products</a></li>
-                <li><a href="#" className="hover:text-white transition">Hoodies</a></li>
-                <li><a href="#" className="hover:text-white transition">T-Shirts</a></li>
-                <li><a href="#" className="hover:text-white transition">Accessories</a></li>
+              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide">Shop</h4>
+              <ul className="space-y-2 text-white/70 text-sm">
+                <li><a href="#" className="hover:text-white transition-colors">All Products</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Hoodies</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">T-Shirts</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Accessories</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-blue-100 text-sm">
-                <li><a href="#" className="hover:text-white transition">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition">Press</a></li>
+              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide">Company</h4>
+              <ul className="space-y-2 text-white/70 text-sm">
+                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Press</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-blue-100 text-sm">
-                <li><a href="#" className="hover:text-white transition">Privacy</a></li>
-                <li><a href="#" className="hover:text-white transition">Terms</a></li>
-                <li><a href="#" className="hover:text-white transition">Shipping</a></li>
-                <li><a href="#" className="hover:text-white transition">Returns</a></li>
+              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide">Legal</h4>
+              <ul className="space-y-2 text-white/70 text-sm">
+                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Shipping</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Returns</a></li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-slate-700 pt-8">
+          <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p className="text-blue-100 text-sm">© 2024 CampusWear. All rights reserved.</p>
-              <div className="flex gap-4">
-                <a href="#" className="text-blue-100 hover:text-white transition">
+              <p className="text-white/60 text-sm">© 2024 CampusWear. All rights reserved.</p>
+              <div className="flex gap-6 text-sm">
+                <a href="#" className="text-white/70 hover:text-white transition-colors">
                   Facebook
                 </a>
-                <a href="#" className="text-blue-100 hover:text-white transition">
+                <a href="#" className="text-white/70 hover:text-white transition-colors">
                   Instagram
                 </a>
-                <a href="#" className="text-blue-100 hover:text-white transition">
+                <a href="#" className="text-white/70 hover:text-white transition-colors">
                   Twitter
                 </a>
-                <a href="#" className="text-blue-100 hover:text-white transition">
+                <a href="#" className="text-white/70 hover:text-white transition-colors">
                   TikTok
                 </a>
               </div>
