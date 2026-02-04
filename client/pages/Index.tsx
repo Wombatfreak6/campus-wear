@@ -105,31 +105,31 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-md shadow-md"></div>
-              <span className="font-bold text-lg">CampusWear</span>
+              <div className="w-8 h-8 bg-accent rounded-md"></div>
+              <span className="font-bold text-base">CampusWear</span>
             </div>
-            <div className="hidden md:flex gap-8">
-              <a href="#shop" className="text-muted-foreground hover:text-foreground transition-colors">
+            <div className="hidden md:flex gap-10">
+              <a href="#shop" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
                 Shop
               </a>
-              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
                 About
               </a>
-              <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
                 Contact
               </a>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <button
                 onClick={toggleTheme}
-                className="p-2 hover:bg-secondary rounded-lg transition-colors"
+                className="p-2 hover:bg-secondary rounded-md transition-colors"
                 aria-label="Toggle theme"
               >
-                {isDark ? <Sun size={20} /> : <Moon size={20} />}
+                {isDark ? <Sun size={18} /> : <Moon size={18} />}
               </button>
-              <button className="relative p-2 hover:bg-secondary rounded-lg transition-colors">
-                <ShoppingCart size={20} />
-                <span className="absolute top-1 right-1 bg-accent text-accent-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+              <button className="relative p-2 hover:bg-secondary rounded-md transition-colors">
+                <ShoppingCart size={18} />
+                <span className="absolute top-0 right-0 bg-accent text-accent-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
                   0
                 </span>
               </button>
