@@ -1,11 +1,25 @@
-import { ShoppingCart, Shirt, Heart, Zap, TrendingUp, Users, Phone, Mail, MapPin, ChevronRight, Sun, Moon } from "lucide-react";
+import {
+  ShoppingCart,
+  Shirt,
+  Heart,
+  Zap,
+  TrendingUp,
+  Users,
+  Phone,
+  Mail,
+  MapPin,
+  ChevronRight,
+  Sun,
+  Moon,
+} from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Index() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem("theme") === "dark" ||
+    const isDarkMode =
+      localStorage.getItem("theme") === "dark" ||
       window.matchMedia("(prefers-color-scheme: dark)").matches;
     setIsDark(isDarkMode);
     updateTheme(isDarkMode);
@@ -109,13 +123,22 @@ export default function Index() {
               <span className="font-bold text-base">CampusWear</span>
             </div>
             <div className="hidden md:flex gap-10">
-              <a href="#shop" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              <a
+                href="#shop"
+                className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm"
+              >
                 Shop
               </a>
-              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              <a
+                href="#features"
+                className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm"
+              >
                 About
               </a>
-              <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              <a
+                href="#contact"
+                className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm"
+              >
                 Contact
               </a>
             </div>
@@ -172,22 +195,27 @@ export default function Index() {
       <section id="features" className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-24">
-            <h2 className="text-5xl sm:text-6xl font-bold mb-6 text-slate-900 dark:text-white">Why Choose Us</h2>
-            <p className="text-lg text-slate-600 dark:text-foreground/70 max-w-xl">Everything you need for authentic college apparel</p>
+            <h2 className="text-5xl sm:text-6xl font-bold mb-6 text-slate-900 dark:text-white">
+              Why Choose Us
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-foreground/70 max-w-xl">
+              Everything you need for authentic college apparel
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {features.map((feature, idx) => {
               const Icon = feature.icon;
               return (
-                <div
-                  key={idx}
-                  className="space-y-4"
-                >
+                <div key={idx} className="space-y-4">
                   <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center">
                     <Icon size={28} className="text-accent" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{feature.title}</h3>
-                  <p className="text-slate-600 dark:text-foreground/70 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="text-slate-600 dark:text-foreground/70 leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
               );
             })}
@@ -199,16 +227,19 @@ export default function Index() {
       <section id="shop" className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-24">
-            <h2 className="text-5xl sm:text-6xl font-bold mb-6 text-slate-900 dark:text-white">Featured Products</h2>
-            <p className="text-lg text-slate-600 dark:text-foreground/70">Curated collection of campus favorites</p>
+            <h2 className="text-5xl sm:text-6xl font-bold mb-6 text-slate-900 dark:text-white">
+              Featured Products
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-foreground/70">
+              Curated collection of campus favorites
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((product) => (
-              <div
-                key={product.id}
-                className="space-y-6 group"
-              >
-                <div className={`relative w-full aspect-square ${product.image} flex items-center justify-center overflow-hidden rounded-lg shadow-md group-hover:shadow-lg transition-all duration-300`}>
+              <div key={product.id} className="space-y-6 group">
+                <div
+                  className={`relative w-full aspect-square ${product.image} flex items-center justify-center overflow-hidden rounded-lg shadow-md group-hover:shadow-lg transition-all duration-300`}
+                >
                   {product.badge && (
                     <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider">
                       {product.badge}
@@ -217,10 +248,16 @@ export default function Index() {
                   <Shirt size={100} className="text-white opacity-35" />
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">{product.name}</h3>
-                  <p className="text-slate-600 dark:text-foreground/70 text-sm line-clamp-2">{product.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                    {product.name}
+                  </h3>
+                  <p className="text-slate-600 dark:text-foreground/70 text-sm line-clamp-2">
+                    {product.description}
+                  </p>
                   <div className="flex justify-between items-end pt-2">
-                    <span className="text-2xl font-bold text-accent">{product.price}</span>
+                    <span className="text-2xl font-bold text-accent">
+                      {product.price}
+                    </span>
                     <button className="p-3 bg-accent/10 hover:bg-accent/20 rounded-lg transition-colors">
                       <ShoppingCart size={20} className="text-accent" />
                     </button>
@@ -248,20 +285,28 @@ export default function Index() {
             </div>
             <div className="space-y-12 pt-8">
               <div className="space-y-4">
-                <h2 className="text-5xl sm:text-6xl font-bold leading-none">Premium College Hoodie</h2>
+                <h2 className="text-5xl sm:text-6xl font-bold leading-none">
+                  Premium College Hoodie
+                </h2>
                 <div className="flex items-center gap-3">
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-xl">★</span>
+                      <span key={i} className="text-yellow-400 text-xl">
+                        ★
+                      </span>
                     ))}
                   </div>
-                  <span className="text-foreground/70 text-base font-medium">(128 reviews)</span>
+                  <span className="text-foreground/70 text-base font-medium">
+                    (128 reviews)
+                  </span>
                 </div>
               </div>
 
               <div className="space-y-10">
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-5">Size</label>
+                  <label className="block text-sm font-bold uppercase tracking-wider mb-5">
+                    Size
+                  </label>
                   <div className="flex gap-3 flex-wrap">
                     {["XS", "S", "M", "L", "XL", "XXL"].map((size) => (
                       <button
@@ -275,13 +320,28 @@ export default function Index() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-5">Color</label>
+                  <label className="block text-sm font-bold uppercase tracking-wider mb-5">
+                    Color
+                  </label>
                   <div className="flex gap-4 flex-wrap">
                     {[
-                      { name: "Navy", color: "bg-blue-900 border-2 border-blue-700 dark:border-blue-600" },
-                      { name: "Gray", color: "bg-gray-600 border-2 border-gray-500" },
-                      { name: "Black", color: "bg-black border-2 border-white/30" },
-                      { name: "White", color: "bg-white border-3 border-foreground" },
+                      {
+                        name: "Navy",
+                        color:
+                          "bg-blue-900 border-2 border-blue-700 dark:border-blue-600",
+                      },
+                      {
+                        name: "Gray",
+                        color: "bg-gray-600 border-2 border-gray-500",
+                      },
+                      {
+                        name: "Black",
+                        color: "bg-black border-2 border-white/30",
+                      },
+                      {
+                        name: "White",
+                        color: "bg-white border-3 border-foreground",
+                      },
                     ].map((col) => (
                       <button
                         key={col.name}
@@ -294,12 +354,21 @@ export default function Index() {
               </div>
 
               <div className="space-y-7 pt-8 border-t border-border/50">
-                <p className="text-foreground/80 leading-relaxed text-base">100% premium cotton with embroidered college logo. Perfect for campus and everyday wear.</p>
+                <p className="text-foreground/80 leading-relaxed text-base">
+                  100% premium cotton with embroidered college logo. Perfect for
+                  campus and everyday wear.
+                </p>
                 <div className="space-y-3">
                   <div className="flex items-baseline gap-6">
-                    <span className="text-6xl font-bold text-white">$49.99</span>
-                    <span className="text-xl text-foreground/50 line-through">$69.99</span>
-                    <span className="text-sm font-bold text-accent/80 uppercase tracking-wide">29% off</span>
+                    <span className="text-6xl font-bold text-white">
+                      $49.99
+                    </span>
+                    <span className="text-xl text-foreground/50 line-through">
+                      $69.99
+                    </span>
+                    <span className="text-sm font-bold text-accent/80 uppercase tracking-wide">
+                      29% off
+                    </span>
                   </div>
                 </div>
               </div>
@@ -321,8 +390,12 @@ export default function Index() {
       <section className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-24">
-            <h2 className="text-5xl sm:text-6xl font-bold mb-6">Special Offers</h2>
-            <p className="text-lg text-foreground/70">Limited time promotions for campus students</p>
+            <h2 className="text-5xl sm:text-6xl font-bold mb-6">
+              Special Offers
+            </h2>
+            <p className="text-lg text-foreground/70">
+              Limited time promotions for campus students
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {offers.map((offer, idx) => (
@@ -333,9 +406,15 @@ export default function Index() {
                 <div className="text-accent font-bold text-xs uppercase tracking-widest">
                   {offer.title}
                 </div>
-                <div className="text-6xl font-bold text-white">{offer.discount}</div>
-                <p className="text-foreground/80 text-base">{offer.description}</p>
-                <div className="text-base font-bold text-accent/90">{offer.price}</div>
+                <div className="text-6xl font-bold text-white">
+                  {offer.discount}
+                </div>
+                <p className="text-foreground/80 text-base">
+                  {offer.description}
+                </p>
+                <div className="text-base font-bold text-accent/90">
+                  {offer.price}
+                </div>
                 <button className="w-full px-6 py-4 bg-accent text-white rounded-md font-bold hover:shadow-lg hover:-translate-y-1 transition-all text-base active:translate-y-0">
                   Claim Offer
                 </button>
@@ -348,9 +427,12 @@ export default function Index() {
       {/* CTA Section */}
       <section className="py-40 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
-          <h2 className="text-6xl sm:text-7xl font-bold leading-none">Ready to Show Your School Pride?</h2>
+          <h2 className="text-6xl sm:text-7xl font-bold leading-none">
+            Ready to Show Your School Pride?
+          </h2>
           <p className="text-lg text-white/90 max-w-xl mx-auto leading-relaxed">
-            Join thousands of students already wearing premium college merchandise.
+            Join thousands of students already wearing premium college
+            merchandise.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <button className="px-8 py-4 bg-white text-primary rounded-md font-bold hover:shadow-lg hover:-translate-y-1 transition-all text-base active:translate-y-0">
@@ -368,7 +450,9 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
-              <h2 className="text-5xl sm:text-6xl font-bold mb-16">Get in Touch</h2>
+              <h2 className="text-5xl sm:text-6xl font-bold mb-16">
+                Get in Touch
+              </h2>
               <div className="space-y-12">
                 <div className="flex gap-6">
                   <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 pt-1">
@@ -385,7 +469,9 @@ export default function Index() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-2">Email</h3>
-                    <p className="text-muted-foreground">hello@campuswear.com</p>
+                    <p className="text-muted-foreground">
+                      hello@campuswear.com
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-6">
@@ -394,7 +480,9 @@ export default function Index() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-2">Address</h3>
-                    <p className="text-muted-foreground">123 College Ave, University Town, ST 12345</p>
+                    <p className="text-muted-foreground">
+                      123 College Ave, University Town, ST 12345
+                    </p>
                   </div>
                 </div>
               </div>
@@ -403,7 +491,9 @@ export default function Index() {
             <div className="bg-secondary rounded-lg p-10 border border-border">
               <form className="space-y-6">
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-3">Name</label>
+                  <label className="block text-sm font-bold uppercase tracking-wider mb-3">
+                    Name
+                  </label>
                   <input
                     type="text"
                     className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50 text-base"
@@ -411,7 +501,9 @@ export default function Index() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-3">Email</label>
+                  <label className="block text-sm font-bold uppercase tracking-wider mb-3">
+                    Email
+                  </label>
                   <input
                     type="email"
                     className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50 text-base"
@@ -419,7 +511,9 @@ export default function Index() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider mb-3">Message</label>
+                  <label className="block text-sm font-bold uppercase tracking-wider mb-3">
+                    Message
+                  </label>
                   <textarea
                     rows={4}
                     className="w-full px-4 py-3 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-accent/50 text-base resize-none"
@@ -444,51 +538,121 @@ export default function Index() {
                 <div className="w-8 h-8 bg-accent rounded-md"></div>
                 <span className="font-bold text-base">CampusWear</span>
               </div>
-              <p className="text-white/70 text-sm leading-relaxed">Premium college merchandise for students everywhere.</p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Premium college merchandise for students everywhere.
+              </p>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-xs uppercase tracking-widest">Shop</h4>
+              <h4 className="font-bold mb-6 text-xs uppercase tracking-widest">
+                Shop
+              </h4>
               <ul className="space-y-3 text-white/70 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">All Products</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Hoodies</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">T-Shirts</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Accessories</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    All Products
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Hoodies
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    T-Shirts
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Accessories
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-xs uppercase tracking-widest">Company</h4>
+              <h4 className="font-bold mb-6 text-xs uppercase tracking-widest">
+                Company
+              </h4>
               <ul className="space-y-3 text-white/70 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Press</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Press
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-xs uppercase tracking-widest">Legal</h4>
+              <h4 className="font-bold mb-6 text-xs uppercase tracking-widest">
+                Legal
+              </h4>
               <ul className="space-y-3 text-white/70 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Shipping</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Returns</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Terms
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Shipping
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Returns
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p className="text-white/60 text-xs">© 2024 CampusWear. All rights reserved.</p>
+              <p className="text-white/60 text-xs">
+                © 2024 CampusWear. All rights reserved.
+              </p>
               <div className="flex gap-8 text-xs">
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
+                <a
+                  href="#"
+                  className="text-white/70 hover:text-white transition-colors"
+                >
                   Facebook
                 </a>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
+                <a
+                  href="#"
+                  className="text-white/70 hover:text-white transition-colors"
+                >
                   Instagram
                 </a>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
+                <a
+                  href="#"
+                  className="text-white/70 hover:text-white transition-colors"
+                >
                   Twitter
                 </a>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
+                <a
+                  href="#"
+                  className="text-white/70 hover:text-white transition-colors"
+                >
                   TikTok
                 </a>
               </div>
