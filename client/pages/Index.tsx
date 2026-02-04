@@ -230,7 +230,7 @@ export default function Index() {
             ))}
           </div>
           <div className="flex justify-center mt-20">
-            <button className="px-8 py-4 border-2 border-foreground text-foreground rounded-md font-bold hover:bg-secondary transition-all duration-200 text-base">
+            <button className="px-8 py-4 border-2 border-accent text-accent rounded-md font-bold hover:bg-accent hover:text-white transition-all duration-200 text-base">
               View All Products
             </button>
           </div>
