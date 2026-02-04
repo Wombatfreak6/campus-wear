@@ -318,25 +318,25 @@ export default function Index() {
       </section>
 
       {/* Offers Section */}
-      <section className="py-24 bg-background">
+      <section className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">Special Offers</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Limited time promotions for campus students</p>
+          <div className="mb-24">
+            <h2 className="text-5xl sm:text-6xl font-bold mb-6">Special Offers</h2>
+            <p className="text-lg text-muted-foreground">Limited time promotions for campus students</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {offers.map((offer, idx) => (
               <div
                 key={idx}
-                className="bg-card rounded-lg p-8 border-l-4 border-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="space-y-6 p-8 border-l-4 border-accent hover:shadow-lg transition-all duration-300"
               >
-                <div className="text-accent font-semibold text-xs mb-3 uppercase tracking-widest">
+                <div className="text-accent font-bold text-xs uppercase tracking-widest">
                   {offer.title}
                 </div>
-                <div className="text-5xl font-bold mb-3">{offer.discount}</div>
-                <p className="text-muted-foreground mb-4 text-sm">{offer.description}</p>
-                <div className="text-sm font-semibold text-accent mb-6">{offer.price}</div>
-                <button className="w-full px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:shadow-md transition-all">
+                <div className="text-6xl font-bold">{offer.discount}</div>
+                <p className="text-muted-foreground text-base">{offer.description}</p>
+                <div className="text-base font-bold text-accent">{offer.price}</div>
+                <button className="w-full px-6 py-4 bg-accent text-accent-foreground rounded-md font-bold hover:shadow-md transition-all text-base">
                   Claim Offer
                 </button>
               </div>
