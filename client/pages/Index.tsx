@@ -141,19 +141,19 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative bg-background pt-32 pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center lg:items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center lg:items-start relative z-10">
             <div className="space-y-10 pt-8">
-              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold leading-none">
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold leading-none text-white dark:text-white">
                 Express Your Campus Pride
               </h1>
-              <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
+              <p className="text-lg max-w-md leading-relaxed text-foreground/90 dark:text-white/85">
                 Premium college merchandise designed for students, by students.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                <button className="px-8 py-4 bg-accent text-accent-foreground rounded-md font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 text-base">
+                <button className="px-8 py-4 bg-accent text-white font-bold rounded-md hover:shadow-lg hover:-translate-y-1 transition-all duration-200 text-base active:translate-y-0">
                   Shop Now
                 </button>
-                <button className="px-8 py-4 border-2 border-foreground text-foreground rounded-md font-bold hover:bg-secondary transition-all duration-200 text-base">
+                <button className="px-8 py-4 border-2 border-accent text-accent rounded-md font-bold hover:bg-accent hover:text-white transition-all duration-200 text-base">
                   Learn More
                 </button>
               </div>
@@ -161,7 +161,7 @@ export default function Index() {
             <div className="relative h-96 lg:h-[600px] flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl shadow-xl"></div>
               <div className="absolute inset-0 rounded-xl flex items-center justify-center">
-                <Shirt size={160} className="text-white opacity-35" />
+                <Shirt size={160} className="text-white opacity-40" />
               </div>
             </div>
           </div>
