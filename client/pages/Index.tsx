@@ -251,35 +251,35 @@ export default function Index() {
       </section>
 
       {/* Product Details Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 lg:h-full">
-              <div className="bg-gradient-to-br from-slate-400 to-slate-600 rounded-2xl h-full flex items-center justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="relative h-96 lg:h-full min-h-[500px]">
+              <div className="bg-gradient-to-br from-slate-400 to-slate-600 rounded-lg h-full w-full flex items-center justify-center shadow-lg">
                 <Shirt size={120} className="text-white opacity-40" />
               </div>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2">Premium College Hoodie</h2>
-                <div className="flex items-center gap-2 mb-4">
+                <h2 className="text-4xl sm:text-5xl font-bold mb-3">Premium College Hoodie</h2>
+                <div className="flex items-center gap-3 text-sm">
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
+                      <span key={i} className="text-yellow-400 text-lg">★</span>
                     ))}
                   </div>
-                  <span className="text-gray-600">(128 reviews)</span>
+                  <span className="text-muted-foreground font-medium">(128 reviews)</span>
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-3">Size</label>
+                  <label className="block text-sm font-semibold mb-4">Size</label>
                   <div className="flex gap-3 flex-wrap">
                     {["XS", "S", "M", "L", "XL", "XXL"].map((size) => (
                       <button
                         key={size}
-                        className="px-4 py-2 border-2 border-gray-300 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition font-medium text-sm"
+                        className="px-4 py-2.5 border-2 border-border rounded-md hover:border-accent hover:bg-accent/5 transition-all font-medium text-sm"
                       >
                         {size}
                       </button>
@@ -288,17 +288,17 @@ export default function Index() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-3">Color</label>
+                  <label className="block text-sm font-semibold mb-4">Color</label>
                   <div className="flex gap-3 flex-wrap">
                     {[
                       { name: "Navy", color: "bg-blue-900" },
                       { name: "Gray", color: "bg-gray-600" },
                       { name: "Black", color: "bg-black" },
-                      { name: "White", color: "bg-white border-2 border-gray-300" },
+                      { name: "White", color: "bg-white border-2 border-border" },
                     ].map((col) => (
                       <button
                         key={col.name}
-                        className={`w-10 h-10 rounded-full hover:scale-110 transition ${col.color}`}
+                        className={`w-11 h-11 rounded-md hover:scale-110 transition-transform shadow-sm ${col.color}`}
                         title={col.name}
                       ></button>
                     ))}
@@ -306,21 +306,23 @@ export default function Index() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-gray-200">
-                <p className="text-gray-600 mb-6">100% premium cotton with embroidered college logo. Perfect for campus and everyday wear. Available in multiple sizes and colors.</p>
-                <div className="flex items-baseline gap-4 mb-6">
-                  <span className="text-4xl font-bold text-slate-900">$49.99</span>
-                  <span className="text-xl text-gray-500 line-through">$69.99</span>
-                  <span className="text-lg font-semibold text-blue-600">Save 29%</span>
+              <div className="space-y-4 pt-6 border-t border-border">
+                <p className="text-muted-foreground leading-relaxed">100% premium cotton with embroidered college logo. Perfect for campus and everyday wear. Available in multiple sizes and colors.</p>
+                <div className="space-y-2">
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-4xl font-bold">$49.99</span>
+                    <span className="text-lg text-muted-foreground line-through">$69.99</span>
+                  </div>
+                  <div className="text-sm font-medium text-accent">Save 29%</div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="flex-1 px-8 py-4 bg-slate-900 text-white rounded-lg font-semibold hover:bg-slate-800 transition flex items-center justify-center gap-2">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <button className="flex-1 px-8 py-4 bg-accent text-accent-foreground rounded-lg font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
                   <ShoppingCart size={20} />
                   Add to Cart
                 </button>
-                <button className="flex-1 px-8 py-4 border-2 border-slate-900 text-slate-900 rounded-lg font-semibold hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                <button className="flex-1 px-8 py-4 border-2 border-border text-foreground rounded-lg font-semibold hover:bg-secondary transition-all flex items-center justify-center gap-2">
                   <Heart size={20} />
                   Wishlist
                 </button>
